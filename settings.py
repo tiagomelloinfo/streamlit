@@ -1,3 +1,6 @@
 
 class Settings:
-    paginas = ('PÁGINA INICIAL', 'SEGURO - Precificação', 'SEGURO - Fraude')
+    paginas = (
+        'PÁGINA INICIAL', 'SEGURO - Precificação', 'SEGURO - Fraude',
+        'BANCO - Evasão'
+    )
