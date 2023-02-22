@@ -9,7 +9,7 @@ from paginas.home import home
 settings = Settings()
 paginas = settings.paginas
 
-pagina_selecionada = st.sidebar.radio('Navegue por aqui!', paginas)
+pagina_selecionada = st.sidebar.radio('-- MENU --', paginas)
 
 if pagina_selecionada == paginas[0]:
     home()
