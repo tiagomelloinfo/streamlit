@@ -2,7 +2,7 @@ import streamlit as st
 
 def home():
     st.title('Tiago Mello')
-    st.header('Cientista de Dados')
+    st.header('CIENTISTA DE DADOS')
 
     st.markdown('---')
     st.write('## CONTATOS')
