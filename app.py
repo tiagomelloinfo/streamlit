@@ -4,6 +4,7 @@ from datetime import date, datetime
 from settings import Settings
 
 from paginas.modelos_saude import reg_precificacao_saude, smoker_fraud
+from paginas.churn_bank import bank_churn
 from paginas.home import home
 
 settings = Settings()
@@ -20,3 +21,6 @@ if pagina_selecionada == paginas[1]:
 
 if pagina_selecionada == paginas[2]:
     smoker_fraud()
+
+if pagina_selecionada == paginas[3]:
+    bank_churn()
