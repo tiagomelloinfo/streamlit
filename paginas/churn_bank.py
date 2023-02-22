@@ -3,6 +3,14 @@ import streamlit as st
 from pycaret.classification import load_model, predict_model
 
 def bank_churn():
+    st.title('Modelo para prever CHURN')
+    st.write('''
+    Esse modelo prevê a probabilidade da evasão de cliente para um banco
+    e informa o score onde quanto mais próximo de 1000, maior a chance
+    de evasão.
+    ''')
+
+    st.markdown('---')
     ###
     idade = st.number_input('Idade', min_value=18, max_value=90, value=30)
     genero = st.selectbox('Sexo', ['Masculino', 'Feminino'])
@@ -53,6 +61,7 @@ def bank_churn():
         'Outros': 'Unknown'
     }
 
+    st.markdown('---')
     ###
     if st.button('EXECUTAR MODELO'):
         dados = {
