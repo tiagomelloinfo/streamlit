@@ -37,7 +37,7 @@ def reg_precificacao_saude():
     st.markdown('---')
 
     if st.button('EXECUTAR MODELO'):
-        modelo = load_model('rf_charges_v1')
+        modelo = load_model('./ml_models/rf_charges_v1')
         res = predict_model(modelo, dados)
         valor_cobranca = res['Label'][0]
         valor_lucro = int(valor_cobranca * (margem_lucro / 100))
@@ -81,7 +81,7 @@ def smoker_fraud():
     st.markdown('---')
 
     if st.button('EXECUTAR MODELO'):
-        modelo = load_model('bagging_classifier_fraud_smoker_v1')
+        modelo = load_model('./ml_models/bagging_classifier_fraud_smoker_v1')
         res = predict_model(modelo, dados, raw_score=True)
         pronome = 'o' if sexo == 'male' else 'a'
         probabilidade = int(res['Score_yes'][0] * 100)
