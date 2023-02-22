@@ -4,6 +4,13 @@ from pycaret.classification import load_model, predict_model
 
 def bank_churn():
     st.title('Modelo para prever CHURN')
+    st.markdown('''
+    <a href="https://github.com/tiagomelloinfo/estudos_machine_learning/blob/main/lgb_churn_v1.ipynb" target="_blank">
+        <button>Notebook do projeto</button>
+    </a>
+    ''', unsafe_allow_html = True)
+    st.write('\n')
+    st.write('\n')
     st.write('''
     Esse modelo prevê a probabilidade da evasão de cliente para um banco
     e informa o score onde quanto mais próximo de 1000, maior a chance
